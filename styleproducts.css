@@ -1,0 +1,79 @@
+.container{
+    display: grid;
+    place-items: center;
+   
+}
+.container-product{
+    display: grid;
+    place-items: center;
+    
+}
+.container-product > header{
+    text-align: center;
+    display: grid;
+    gap: 0.5em;
+}
+
+.container-product > article{
+    display: grid;
+    place-items: center;
+}
+.container-product > header > h1{
+    font-size: 2.2rem;
+    letter-spacing: 0.2em;
+}
+
+.container-product > header > h2{
+    border: 1px solid black;
+}
+
+.container-flowers{
+    padding: 2em 0;
+    display: grid;
+    gap: 3em;
+}
+
+.card{
+    display: grid;
+    gap: 0.3em;
+}
+
+.card > article{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+    font-size: 1.3rem;
+}
+
+.card > picture{
+    max-width: 26.4em;
+    max-height: 26.4em;
+    overflow: hidden;
+    border-top: 1px solid brown;
+    border-bottom: 1px solid brown;
+}
+
+span{
+    color: red;
+}
+
+.card > picture > img{
+    /* border: 2px solid rgb(101, 44, 0); */
+    cursor: pointer;
+}
+
+a{
+    color: black;
+}
+
+.buttonBack{
+    display: grid;
+    place-items: center;
+}
+
+.buttonBack > button{
+    background-color: transparent;
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid black;
+}

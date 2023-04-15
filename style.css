@@ -1,0 +1,325 @@
+/* css reset */
+
+*, *::before, *::after{
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+}
+
+html, body{
+	min-height: 100vh;
+}
+
+img, picture, svg, video{
+	display: block;
+	max-width: 100%;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+a{
+text-decoration: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* settings */
+
+/* section */
+section{
+  background: url('images/background.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* container */
+.container {
+  scrollbar-width: none;
+  /* For Firefox */
+  -ms-overflow-style: none;
+  /* For Internet Explorer and Edge */
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+  /* For Chrome, Safari, and Opera */
+}
+.container {
+  display: grid;
+  gap: 3em;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-behavior: smooth;
+  
+}
+.container{
+  background-color: #f5f5dc;
+  /* padding: 3em 2em; */
+  /* max-height: 42.6; */
+}
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-snap-stop: normal;
+  /* scroll-padding-inline: 2em 1em; */
+}
+
+.snaps-inline > * {
+  scroll-snap-align: start;
+}
+
+/* pages */
+.page {
+    display: grid;
+    grid-template-rows: min-content;
+    place-items: center;
+    gap: 1em;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 100vh;
+    padding: 1em;
+  }
+  .page {
+    scrollbar-width: none;
+    /* For Firefox */
+    -ms-overflow-style: none;
+    /* For Internet Explorer and Edge */
+  }
+  
+  .page::-webkit-scrollbar {
+    display: none;
+    /* For Chrome, Safari, and Opera */
+  }
+.about{
+  width: 70%;
+  display: grid;
+  place-content: center;
+
+}
+.about > img{
+  inline-size: 100%;
+  /* border-radius: 50%;
+  border: 1.5px solid brown; */
+}
+
+.vl{
+  border: 1.5px solid rgb(96, 44, 2);
+  height: 40px;
+}
+.aboutpage > article{
+  border-left: 2px solid rgb(96, 44, 2);
+  margin-top: -1.1em;
+  padding: 1em;
+  margin-bottom: -1em;
+}
+.half-border {
+  position: relative;
+}
+
+.half-border::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  border-bottom: 2px solid rgb(96, 44, 2);
+}
+
+.top-border{
+  position: relative;
+}
+
+.top-border::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  border-top: 2px solid rgb(96, 44, 2);
+}
+
+
+/* general styling */
+body{
+  font-family: 'Raleway', sans-serif;
+}
+
+
+/* about page */
+header > h1{
+    color: #3a3d33;
+    font-size: 1.2rem;
+}
+
+.title{
+    font-size: 2.5rem;
+    color:#3a3d33;
+    font-weight: 900;
+    font-family: 'Dancing Script', cursive;
+}
+
+button{
+  border-radius: 2em;
+  background-color: beige;
+  border: none;
+  padding: 0.6em;
+  cursor: pointer;
+  border-radius: 1.2em;
+}
+
+button > img{
+  inline-size: 2em;
+}
+
+@media  screen and (min-width: 41em) {
+  section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 1em;
+  }
+  .container{
+    width: 26.6em;
+    overflow-x: hidden;
+    height: 90vh;
+    border: 2px solid black;
+  }
+  
+  #prevBtn{
+    top: 0;
+    right: auto;
+    left: 0;
+  }
+  
+  #nextBtn{
+    top: 0;
+    right: 20px;
+  }
+}
+
+/* link page */
+.linkpage{
+  overflow-y: hidden;
+  /* height: 27em; */
+  height: fit-content;
+}
+
+.linkpage > picture{
+  width: 100%;
+}
+
+.linkpage > header, .aboutpage > header{
+  /* margin-top: -50em; */
+  letter-spacing: 0.5em;
+}
+
+.linkpage > picture > img{
+  border: 2px solid rgb(101, 44, 0);
+}
+
+.linkpage > nav{
+  /* margin-top: -143em; */
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+}
+
+.linkpage > nav > a{
+  background-color: transparent;
+  width: 100%;
+  border: 1px solid black;
+  color: black;
+  text-align: center;
+  padding: 0.5em;
+}
+
+.linkpage > article{
+  font-size: 0.7rem;
+  line-height: 1.9em;
+}
+/* product page */
+.productpage{
+  display: flex;
+  flex-direction: column;
+}
+.productpage > *:not(article){
+  text-align: center;
+}
+
+.productpage > .title{
+  font-family: 'Roboto Slab', serif;
+}
+.productpage > nav{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.productpage > nav > a{
+  background-color: transparent;
+  width: 100%;
+  border: 1px solid black;
+  color: black;
+  text-align: center;
+  padding: 0.5em;
+}
+
+.container-break{
+  cursor: pointer;
+  max-width: 1em;
+}
+
+/* developer page */
+
+.developerpage{
+  padding: 5em;
+  height: fit-content;
+}
+
+.developerpage a{
+  color: white;
+}
+
+.card-developer{
+  text-align: center;
+  padding: 1em;
+  background-color: black;
+}
