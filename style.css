@@ -199,6 +199,7 @@ button{
   padding: 0.6em;
   cursor: pointer;
   border-radius: 50%;
+  margin-right: 0.8em;
 }
 
 button > img{
