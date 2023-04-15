@@ -70,6 +70,8 @@ a{
 .buttonBack{
     display: grid;
     place-items: center;
+    width: 100%;
+    cursor: pointer;
 }
 
 .buttonBack > button{
@@ -78,4 +80,5 @@ a{
     border-radius: 0;
     border: 1px solid black;
     padding: 1em;
+    cursor: pointer;
 }
