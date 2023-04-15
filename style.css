@@ -208,12 +208,12 @@ button > img{
 @media screen and (max-width: 41em) {
   .mobilebutton{
     position: fixed;
-    top: 36em;
+    top: 34em;
     right: 0;
   }
   .mobilebutton:nth-of-type(2){
     position: fixed;
-    top: 40em;
+    top: 38em;
     right: 0;
   }
 }
