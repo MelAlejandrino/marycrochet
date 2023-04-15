@@ -194,17 +194,28 @@ header > h1{
 
 button{
   border-radius: 2em;
-  background-color: beige;
+  background-color: rgba(165, 42, 42, 0.099);
   border: none;
   padding: 0.6em;
   cursor: pointer;
-  border-radius: 1.2em;
+  border-radius: 50%;
 }
 
 button > img{
   inline-size: 2em;
 }
-
+@media screen and (max-width: 41em) {
+  .mobilebutton{
+    position: fixed;
+    top: 36em;
+    right: 0;
+  }
+  .mobilebutton:nth-of-type(2){
+    position: fixed;
+    top: 40em;
+    right: 0;
+  }
+}
 @media  screen and (min-width: 41em) {
   section{
     display: flex;
