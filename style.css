@@ -335,3 +335,16 @@ header > h1{
   padding: 1em;
   background-color: black;
 }
+
+/* masonry */
+.grid{
+  display:flow-root;
+  columns: 2;
+  gap: 1em;
+  padding: 0.5em;
+}
+
+.grid > * {
+  break-inside: avoid;
+  margin-bottom: 1em;
+}
