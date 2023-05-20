@@ -340,7 +340,7 @@ header > h1{
 .grid{
   display:flow-root;
   columns: 2;
-  gap: 1em;
+  gap: 0.5em;
   padding: 0.5em;
 }
 
