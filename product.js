@@ -27,3 +27,4 @@ tulip.addEventListener('click', () => {
     { behavior: 'smooth' }
   );
 });
+
